@@ -1,4 +1,4 @@
-package course.labs.todomanager.tests;
+package course.labs.todomanager;
 
 import android.test.ActivityInstrumentationTestCase2;
 
