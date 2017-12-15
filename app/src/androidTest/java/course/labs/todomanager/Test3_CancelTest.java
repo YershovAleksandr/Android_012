@@ -40,7 +40,7 @@ public class Test3_CancelTest extends
 
 		solo.sleep(delay);
 		
-		// Click on Add New ToDo Item
+		// Click on Add New To Do Item
 		solo.clickOnView(solo.getView(course.labs.todomanager.R.id.footerView));
 
 		// Wait for activity: 'course.labs.todomanager.AddToDoActivity'
@@ -79,7 +79,7 @@ public class Test3_CancelTest extends
 				solo.waitForActivity(
 						course.labs.todomanager.AddToDoActivity.class, delay));	
 		
-		// Click on Add New ToDo Item
+		// Click on Add New To Do Item
 		solo.clickOnView(solo.getView(course.labs.todomanager.R.id.footerView));
 
 		// Wait for activity: 'course.labs.todomanager.AddToDoActivity'

@@ -42,7 +42,7 @@ public class Test2_DateTimeTest extends ActivityInstrumentationTestCase2<ToDoMan
 
 		solo.sleep(delay);
 		
-		// Click on Add New ToDo Item
+		// Click on Add New To Do Item
 		solo.clickOnView(solo.getView(course.labs.todomanager.R.id.footerView));
 
 		// Wait for activity: 'course.labs.todomanager.AddToDoActivity'
