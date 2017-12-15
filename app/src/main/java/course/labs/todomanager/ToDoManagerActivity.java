@@ -56,7 +56,7 @@ public class ToDoManagerActivity extends ListActivity {
 		}
 		// TODO - Add footerView to ListView
 
-
+		//addFooterView()
 		
         
         
@@ -67,6 +67,8 @@ public class ToDoManagerActivity extends ListActivity {
 
 
 				//TODO - Implement OnClick().
+
+				//Start new Activity AddToDoActivity
 			}
 		});
 
