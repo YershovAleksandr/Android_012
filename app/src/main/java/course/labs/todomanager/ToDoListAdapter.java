@@ -91,6 +91,7 @@ public class ToDoListAdapter extends BaseAdapter {
 		// from todo_item.xml
 		RelativeLayout itemLayout = null;
 
+
 		// Fill in specific ToDoItem data
 		// Remember that the data that goes in this View
 		// corresponds to the user interface elements defined

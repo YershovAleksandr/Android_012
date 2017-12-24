@@ -20,6 +20,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.ListView;
 import android.widget.TextView;
 import course.labs.todomanager.ToDoItem.Priority;
 import course.labs.todomanager.ToDoItem.Status;
@@ -46,34 +47,41 @@ public class ToDoManagerActivity extends ListActivity {
 		// Put divider between ToDoItems and FooterView
 		getListView().setFooterDividersEnabled(true);
 
-		// TODO - Inflate footerView for footer_view.xml file
+		// DO - Inflate footerView for footer_view.xml file
 		TextView footerView = null;
 
+		footerView = (TextView) getLayoutInflater().inflate(R.layout.footer_view, null);
 
 		// NOTE: You can remove this block once you've implemented the assignment
 		if (null == footerView) {
+			Log.i(TAG, "WTF&&&");
 			return;
 		}
-		// TODO - Add footerView to ListView
+		// DO - Add footerView to ListView
 
-		//addFooterView()
-		
+		getListView().addFooterView(footerView);
+
         
-        
-		// TODO - Attach Listener to FooterView
+		// DO - Attach Listener to FooterView
 		footerView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 
+				Log.i(TAG, "Footer Click");
 
-				//TODO - Implement OnClick().
+				//DO - Implement OnClick().
 
-				//Start new Activity AddToDoActivity
+				Intent intent = new Intent(getBaseContext(), AddToDoActivity.class);
+				//Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+
+				startActivityForResult(intent, ADD_TODO_ITEM_REQUEST);
 			}
 		});
 
-		// TODO - Attach the adapter to this ListActivity's ListView
-		
+		// DO - Attach the adapter to this ListActivity's ListView
+
+		setListAdapter(mAdapter);
+
 	}
 
 	@Override
@@ -86,6 +94,27 @@ public class ToDoManagerActivity extends ListActivity {
 		// Create a new ToDoItem from the data Intent
 		// and then add it to the adapter
 
+		if (ADD_TODO_ITEM_REQUEST == requestCode)
+		{
+			if (RESULT_OK == resultCode)
+			{
+
+				Log.i(TAG, "Activity result Ok");
+
+				//data.getExtras()
+
+				ToDoItem item = new ToDoItem(data);
+
+				mAdapter.add(item);
+
+			}
+			if (RESULT_CANCELED == resultCode)
+			{
+
+				Log.i(TAG, "Activity result Cancel");
+
+			}
+		}
 
             
             
