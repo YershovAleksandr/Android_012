@@ -114,9 +114,7 @@ public class AddToDoActivity extends Activity {
 				mStatusRadioGroup.check(mDefaultStatusButton.getId());
 
 				mPriorityRadioGroup.check(mDefaultPriorityButton.getId());
-                
-                
-                
+
 				// reset date and time
 				setDefaultDateTime();
 
