@@ -12,15 +12,20 @@ import java.io.PrintWriter;
 import java.text.ParseException;
 import java.util.Date;
 
+import android.app.ActionBar;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toolbar;
+
 import course.labs.todomanager.ToDoItem.Priority;
 import course.labs.todomanager.ToDoItem.Status;
 
@@ -39,6 +44,9 @@ public class ToDoManagerActivity extends ListActivity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		//getActionBar().
+		
 
 		// Create a new TodoListAdapter for this ListActivity's ListView
 		mAdapter = new ToDoListAdapter(getApplicationContext());
@@ -147,6 +155,9 @@ public class ToDoManagerActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
+
+		//MenuInflater inflater = getMenuInflater();
+		//inflater.inflate(R.menu.navigation, menu);
 
 		menu.add(Menu.NONE, MENU_DELETE, Menu.NONE, "Delete all");
 		menu.add(Menu.NONE, MENU_DUMP, Menu.NONE, "Dump to log");
