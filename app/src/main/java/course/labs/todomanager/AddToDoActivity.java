@@ -117,7 +117,6 @@ public class AddToDoActivity extends Activity {
 
 				// reset date and time
 				setDefaultDateTime();
-
 			}
 		});
 
