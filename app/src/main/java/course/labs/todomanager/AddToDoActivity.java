@@ -111,7 +111,7 @@ public class AddToDoActivity extends Activity {
 
 				mTitleText.setText("");
 
-				mDefaultStatusButton
+				mStatusRadioGroup.check(mDefaultStatusButton.getId());
                 
                 
                 
