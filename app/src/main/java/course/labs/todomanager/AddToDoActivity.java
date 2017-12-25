@@ -92,7 +92,13 @@ public class AddToDoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
+				//Intent intent = new Intent(getBaseContext(), ToDoManagerActivity.class);
 
+				setResult(RESULT_CANCELED);
+
+				//startActivity(intent);
+
+				finish();
 
 				// TODO - Indicate result and finish
 
