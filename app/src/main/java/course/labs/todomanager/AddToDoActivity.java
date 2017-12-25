@@ -112,6 +112,8 @@ public class AddToDoActivity extends Activity {
 				mTitleText.setText("");
 
 				mStatusRadioGroup.check(mDefaultStatusButton.getId());
+
+				mPriorityRadioGroup.check(mDefaultPriorityButton.getId());
                 
                 
                 
