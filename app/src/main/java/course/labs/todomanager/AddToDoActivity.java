@@ -111,6 +111,7 @@ public class AddToDoActivity extends Activity {
 
 				mTitleText.setText("");
 
+				mDefaultStatusButton
                 
                 
                 
