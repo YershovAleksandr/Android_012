@@ -98,7 +98,6 @@ public class AddToDoActivity extends Activity {
 
 				finish();
 
-                
 			}
 		});
 
