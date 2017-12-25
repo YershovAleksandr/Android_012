@@ -139,7 +139,6 @@ public class ToDoListAdapter extends BaseAdapter {
 		priorityView.setText(toDoItem.getPriority().toString());
 
 
-
 		// TODO - Display Time and Date.
 		// Hint - use ToDoItem.FORMAT.format(toDoItem.getDate()) to get date and
 		// time String
