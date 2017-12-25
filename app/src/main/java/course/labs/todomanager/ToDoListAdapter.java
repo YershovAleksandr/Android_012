@@ -5,6 +5,7 @@ import java.util.List;
 
 import android.content.Context;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -83,13 +84,16 @@ public class ToDoListAdapter extends BaseAdapter {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 
-		// TODO - Get the current ToDoItem
-		final ToDoItem toDoItem = null;
+		// DO - Get the current ToDoItem
+		final ToDoItem toDoItem = (ToDoItem)getItem(position);
 
-
-		// TODO - Inflate the View for this ToDoItem
+		// DO - Inflate the View for this ToDoItem
 		// from todo_item.xml
-		RelativeLayout itemLayout = null;
+		//RelativeLayout itemLayout = null;
+
+		LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+		View itemLayout = inflater.inflate(R.layout.todo_item, parent, false);
 
 
 		// Fill in specific ToDoItem data
@@ -97,15 +101,18 @@ public class ToDoListAdapter extends BaseAdapter {
 		// corresponds to the user interface elements defined
 		// in the layout file
 
-		// TODO - Display Title in TextView
-		final TextView titleView = null;
+		// DO - Display Title in TextView
+		TextView titleView = null;
+		titleView = (TextView)itemLayout.findViewById(R.id.titleView);
+		titleView.setText(toDoItem.getTitle());
 
 
-		// TODO - Set up Status CheckBox
-		final CheckBox statusView = null;
+		// DO - Set up Status CheckBox
+		final CheckBox statusView = (CheckBox)itemLayout.findViewById(R.id.statusCheckBox);
+		statusView.setChecked(toDoItem.getStatus() == ToDoItem.Status.DONE);
 
 
-		// TODO - Must also set up an OnCheckedChangeListener,
+		// DO - Must also set up an OnCheckedChangeListener,
 		// which is called when the user toggles the status checkbox
 
 		statusView.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -113,11 +120,17 @@ public class ToDoListAdapter extends BaseAdapter {
 					public void onCheckedChanged(CompoundButton buttonView,
 							boolean isChecked) {
 
+						Log.i(TAG, "Check!!!");
 
+						if (isChecked)
+						{
+							toDoItem.setStatus(ToDoItem.Status.DONE);
 
-                        
-                        
-                        
+						}
+						else
+						{
+							toDoItem.setStatus(ToDoItem.Status.NOTDONE);
+						}
 					}
 				});
 
