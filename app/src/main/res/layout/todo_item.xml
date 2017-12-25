@@ -12,7 +12,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/background_dark"></TextView>
+        android:textColor="@android:color/background_light"></TextView>
 
     <TextView
         android:id="@+id/StatusLabel"
@@ -23,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="17dp"
         android:text="@string/done_string"
-        android:textColor="@android:color/background_dark"></TextView>
+        android:textColor="@android:color/background_light"></TextView>
 
     <CheckBox
         android:id="@+id/statusCheckBox"
@@ -32,7 +32,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="52dp"
         android:layout_toRightOf="@+id/StatusLabel"
-        android:textColor="@android:color/background_dark"></CheckBox>
+        android:textColor="@android:color/background_light"></CheckBox>
 
     <TextView
         android:id="@+id/PriorityLabel"
@@ -42,7 +42,7 @@
         android:layout_alignTop="@+id/StatusLabel"
         android:layout_toLeftOf="@+id/priorityView"
         android:text="@string/priority_string"
-        android:textColor="@android:color/background_dark"></TextView>
+        android:textColor="@android:color/background_light"></TextView>
 
     <TextView
         android:id="@+id/priorityView"
@@ -51,7 +51,7 @@
         android:layout_alignBaseline="@+id/statusCheckBox"
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/StatusLabel"
-        android:textColor="@android:color/background_dark"></TextView>
+        android:textColor="@android:color/background_light"></TextView>
 
     <TextView
         android:id="@+id/DateLabel"
@@ -60,7 +60,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/statusCheckBox"
         android:text="@string/date_string"
-        android:textColor="@android:color/background_dark"></TextView>
+        android:textColor="@android:color/background_light"></TextView>
 
     <TextView
         android:id="@+id/dateView"
@@ -68,6 +68,6 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/DateLabel"
         android:layout_toRightOf="@+id/DateLabel"
-        android:textColor="@android:color/background_dark"></TextView>
+        android:textColor="@android:color/background_light"></TextView>
 
 </RelativeLayout>
