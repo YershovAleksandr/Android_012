@@ -92,7 +92,7 @@ public class AddToDoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				// TODO - Indicate result and finish
+				// DO - Indicate result and finish
 
 				setResult(RESULT_CANCELED);
 
