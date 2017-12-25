@@ -130,16 +130,18 @@ public class AddToDoActivity extends Activity {
 				// gather ToDoItem data
 
 
-				// TODO - Get the current Priority
+				// DO - Get the current Priority
 				Priority priority = null;
+				priority = getPriority();
 
-				// TODO - Get the current Status
+				// DO - Get the current Status
 				Status status = null;
+				status = getStatus();
 
-				// TODO - Get the current ToDoItem Title
-
+				// DO - Get the current ToDoItem Title
 
 				String titleString = null;
+				titleString = getToDoTitle();
 
 
 				// Construct the Date string
@@ -152,10 +154,9 @@ public class AddToDoActivity extends Activity {
 
 				// TODO - return data Intent and finish
 
+				setResult(RESULT_OK, data);
+				finish();
 
-
-
-            
             
 			}
 		    });
