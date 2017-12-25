@@ -134,8 +134,9 @@ public class ToDoListAdapter extends BaseAdapter {
 					}
 				});
 
-		// TODO - Display Priority in a TextView
-		final TextView priorityView = null;
+		// DO - Display Priority in a TextView
+		final TextView priorityView = (TextView)itemLayout.findViewById(R.id.PriorityLabel);
+		priorityView.setText(toDoItem.getPriority().toString());
 
 
 
