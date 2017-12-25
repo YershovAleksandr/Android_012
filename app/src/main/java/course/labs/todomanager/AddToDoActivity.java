@@ -83,7 +83,9 @@ public class AddToDoActivity extends Activity {
 			}
 		});
 
-		// OnClickListener for the Cancel Button,
+		// OnClickListener for the Cancel Button
+
+
 
 		final Button cancelButton = (Button) findViewById(R.id.cancelButton);
 		cancelButton.setOnClickListener(new OnClickListener() {
@@ -99,7 +101,7 @@ public class AddToDoActivity extends Activity {
 			}
 		});
 
-		// TODO - Set up OnClickListener for the Reset Button
+		// DO - Set up OnClickListener for the Reset Button
 		final Button resetButton = (Button) findViewById(R.id.resetButton);
 		resetButton.setOnClickListener(new OnClickListener() {
 			@Override
