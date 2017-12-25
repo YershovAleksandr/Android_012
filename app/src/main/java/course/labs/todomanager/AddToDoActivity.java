@@ -107,7 +107,6 @@ public class AddToDoActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 
-
 				// TODO - Reset data to default values
 
 
