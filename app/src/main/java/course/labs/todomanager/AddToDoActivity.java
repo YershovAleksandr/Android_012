@@ -109,6 +109,7 @@ public class AddToDoActivity extends Activity {
 
 				// TODO - Reset data to default values
 
+				mTitleText.setText("");
 
                 
                 
